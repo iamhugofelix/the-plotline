@@ -2,3 +2,7 @@
 @use './styles/globals';
 @use './styles/variables';
 @use './styles/mixins';
+
+// UI Components
+@use './components/UI/NavBar/NavBar';
+@use './components/UI/Buttons/Buttons';

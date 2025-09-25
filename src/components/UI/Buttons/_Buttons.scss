@@ -1,0 +1,43 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.btn {
+    @include flex(row, center, center);
+    line-height: normal;
+    border-radius: 10rem;
+    transition: all 0.2s ease-in-out;
+    font-weight: $regular;
+
+    &-nav {
+        background-color: rgba($color: $white, $alpha: 0);
+        transition: all 0.4s ease-in-out;
+        gap: 0.5rem;
+
+        &:hover {
+            background-color: rgba($color: $white, $alpha: .1);
+        }
+    }
+
+    &-transparent{
+        border: none;
+
+        &:hover {
+            background-color: rgba($color: $white, $alpha: .05)
+        }
+    }
+
+    &--sm {
+        font-size: $p;
+        padding: .75rem 1rem .75rem 1rem;
+    }
+
+    &--md {
+        font-size: $p;
+        padding: .75rem 1.25rem .75rem 1.25rem;
+    }
+
+    &--lg {
+        font-size: $p;
+        padding: 1.125rem 1.5rem 1.25rem 1.5rem;
+    }
+}

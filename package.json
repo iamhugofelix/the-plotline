@@ -15,7 +15,8 @@
     "react-dom": "^19.1.1",
     "react-router": "^7.9.2",
     "router": "^2.2.0",
-    "saas": "^1.0.0"
+    "saas": "^1.0.0",
+    "simple-icons": "^15.16.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
