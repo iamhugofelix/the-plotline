@@ -1,7 +1,19 @@
-@mixin flex ($direction: row, $justify: center, $align: center) {
+@mixin flex (
+    $direction: row, 
+    $justify: center, 
+    $align: center
+) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
 }
 
+@mixin grid (
+    $cols: 4,
+    $rows: auto,
+) {
+    display: grid;
+    grid-template-columns: repeat($cols, minmax(0, 1fr));
+    grid-template-columns: auto;
+}
