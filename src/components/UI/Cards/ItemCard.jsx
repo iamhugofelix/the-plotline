@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export default function ItemCard({type, cardPoster, cardTitle, cardYear, cardRating, cardPosition, id}) {
+export default function ItemCard({type, id, cardPoster, cardTitle, cardYear, cardRating, cardPosition}) {
     
     return (
       <Link to={`/${type}/${id}`}>
