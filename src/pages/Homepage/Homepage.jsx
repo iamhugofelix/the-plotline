@@ -1,14 +1,18 @@
 import PopularMovies from "@/components/MovieComponents/PopularMovies";
-import ItemCard from "@/components/UI/Cards/ItemCard";
+import TrendingMovies from "@/components/MovieComponents/TrendingMovies";
+import AiringTodayTv from "@/components/TvComponents/AiringTodayTv";
+import PopularTv from "@/components/TvComponents/PopularTv";
 import HeroSection from "@/components/UI/HeroSection/HeroSection";
+
 
 export default function Homepage () {
   return (
     <>
       <HeroSection />
-      <div className="popular-movies">
-        <PopularMovies />
-      </div>
+      <PopularMovies />
+      <TrendingMovies />
+      <PopularTv />
+      <AiringTodayTv />
     </>
   );
 }

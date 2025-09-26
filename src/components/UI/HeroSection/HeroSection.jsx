@@ -25,8 +25,8 @@ export default function HeroSection () {
     loadTopItem();
   }, []);
 
-  // Load top item details
   useEffect(() => {
+    // Load top item details
     if (!topItem || !["movie", "tv"].includes(topItem.media_type)) return;
 
     const loadTopItemDetails = async () => {
@@ -39,15 +39,16 @@ export default function HeroSection () {
     };
 
     loadTopItemDetails();
-  }, [topItem]);
 
-  // Load top item trailer
-  useEffect(() => {
+    //Load top item trailer
     if (!topItem || !["movie", "tv"].includes(topItem.media_type)) return;
 
     const loadTopItemTrailer = async () => {
       try {
-        const data = await fetchTopItemTrailer(topItem.media_type, topItem.id);
+        const data = await fetchTopItemTrailer(
+          topItem.media_type,
+          topItem.id
+        );
         setTopItemTrailer(data.results[0]);
       } finally {
         setIsLoading(false);
@@ -55,11 +56,12 @@ export default function HeroSection () {
     };
 
     loadTopItemTrailer();
+    
   }, [topItem]);
 
-    {
-      isLoading && <p>Loading...</p>;
-    }
+  {
+    isLoading && <p>Loading...</p>;
+  }
 
   return (
     <div

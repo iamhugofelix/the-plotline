@@ -3,7 +3,7 @@
 
 .item-card {
     @include flex(column, start, start);
-    gap: .5rem;
+    gap: 1rem;
     cursor: pointer;
     width: 14rem;
     opacity: 0.65;
