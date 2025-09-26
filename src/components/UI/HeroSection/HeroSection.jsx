@@ -57,6 +57,10 @@ export default function HeroSection () {
     loadTopItemTrailer();
   }, [topItem]);
 
+    {
+      isLoading && <p>Loading...</p>;
+    }
+
   return (
     <div
       className="hero-section"
@@ -84,11 +88,14 @@ export default function HeroSection () {
 
         <h1>{topItem.title}</h1>
         <p className="h5 regular">{topItem.overview}</p>
-        <div className="hero-details">
-          <span>{topItem.release_date?.slice(0, 4)}</span>
-          <span>&middot;</span>
-          <StarRating rating={topItem.vote_average} />
-        </div>
+
+        { topItem.release_date && 
+          <div className="hero-details">
+            <span>{topItem.release_date?.slice(0, 4)}</span>
+            <span>&middot;</span>
+            <StarRating rating={topItem.vote_average} />
+          </div>
+        }
 
         <div className="hero-actions">
           <Link
