@@ -9,6 +9,7 @@ import TvDetailsPage from './pages/TvDetailsPage/TvDetailsPage.jsx'
 import TvPage from './pages/TvPage/TvPage.jsx'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 import NavBar from './components/UI/NavBar/NavBar'
+import Footer from './components/UI/Footer/Footer'
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")).render(
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   </StrictMode>
 );

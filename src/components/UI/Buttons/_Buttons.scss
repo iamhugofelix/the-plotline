@@ -19,7 +19,8 @@
     }
 
     &-transparent{
-        border: none;
+        border: solid 1px rgba($color: $white, $alpha: .05);
+        background: rgba($color: $white, $alpha: .02);
 
         &:hover {
             background-color: rgba($color: $white, $alpha: .05)
@@ -36,8 +37,8 @@
 
     &--sm {
         font-size: $p;
-        gap: .25rem;
-        padding: .75rem 1rem .75rem 1rem;
+        gap: .5rem;
+        padding: .5rem .75rem .5rem .75rem;
     }
 
     &--md {
@@ -51,4 +52,8 @@
         gap: .5rem;
         padding: 1rem 1.5rem 1rem 1.5rem;
     }
+}
+
+.link {
+    font-weight: $bold;
 }
