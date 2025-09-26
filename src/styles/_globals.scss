@@ -3,16 +3,20 @@
 // Typography
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-h1, .h1 { font-size: $h1; font-weight: $bold; }
-h2, .h2 { font-size: $h2; font-weight: $bold; }
-h3, .h3 { font-size: $h3; font-weight: $bold; }
-h4, .h4 { font-size: $h4; font-weight: $bold; }
-h5, .h5 { font-size: $h5; font-weight: $bold; }
-h6, .h6 { font-size: $h6; font-weight: $bold; }
+h1, .h1 { font-size: $h1; font-weight: $bold; line-height: 1.2;}
+h2, .h2 { font-size: $h2; font-weight: $bold; line-height: 1.2;}
+h3, .h3 { font-size: $h3; font-weight: $bold; line-height: 1.2;}
+h4, .h4 { font-size: $h4; font-weight: $bold; line-height: 1.5;}
+h5, .h5 { font-size: $h5; font-weight: $bold; line-height: 1.5;}
+h6, .h6 { font-size: $h6; font-weight: $bold; line-height: 1.5;}
 
-p, .p{ font-size: $p; font-weight: $regular; }
-small, .small { font-size: $small; font-weight: $regular; }
-.x-small { font-size: $x-small; font-weight: $regular; }
+p, .p{ font-size: $p; font-weight: $regular; line-height: 1.5;}
+small, .small { font-size: $small; font-weight: $regular; line-height: 1.2;}
+.x-small { font-size: $x-small; font-weight: $regular; line-height: 1.2;}
+
+.bold {font-weight: $bold;}
+.regular {font-weight: $regular;}
+.light {font-weight: $light;}
 
 // General Styles
 body {

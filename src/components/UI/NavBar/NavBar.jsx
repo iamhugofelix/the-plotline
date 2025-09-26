@@ -1,4 +1,5 @@
 import { Compass, Film, Tv } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
 
 export default function NavBar() {
@@ -19,7 +20,9 @@ export default function NavBar() {
         </Link>
       </div>
       <dir className="nav-actions">
-        <Link to={"https://github.com/iamhugofelix"}>GitHub</Link>
+        <Link to={"https://github.com/iamhugofelix"}>
+          <FaGithub size={32} />
+        </Link>
       </dir>
     </nav>
   );

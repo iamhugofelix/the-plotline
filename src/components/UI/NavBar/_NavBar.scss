@@ -5,10 +5,14 @@
     width: 100%;
     @include flex (row, space-between, center);
     padding: 1rem 2rem;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     background: linear-gradient(to bottom, $black, transparent);
+
+    img {
+        width: 2rem;;
+    }
 
     .nav-links {
         @include flex (row, center, center);

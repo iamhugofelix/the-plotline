@@ -1,0 +1,18 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.star-rating{
+    @include flex(row, center, center);
+    gap: .25rem;
+    color: $gray-300;
+    
+    .stars {
+        @include flex(row, center, center);
+        gap: 0.25rem;
+
+        svg {
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+}

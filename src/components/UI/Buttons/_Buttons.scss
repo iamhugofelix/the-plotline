@@ -26,18 +26,29 @@
         }
     }
 
+    &-opaque{
+        background: rgba($color: $white, $alpha: .2);
+
+        &:hover {
+            background-color: rgba($color: $white, $alpha: .05)
+        }
+    }
+
     &--sm {
         font-size: $p;
+        gap: .25rem;
         padding: .75rem 1rem .75rem 1rem;
     }
 
     &--md {
         font-size: $p;
+        gap: .5rem;
         padding: .75rem 1.25rem .75rem 1.25rem;
     }
 
     &--lg {
         font-size: $p;
-        padding: 1.125rem 1.5rem 1.25rem 1.5rem;
+        gap: .5rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
     }
 }
