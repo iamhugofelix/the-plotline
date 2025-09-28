@@ -4,7 +4,7 @@ import { options } from "../utils";
 export async function fetchTvDetails(id) {
   try {
     const result = await fetch(
-      `https://api.thetvdb.org/3/tv/${id}`,
+      `https://api.themoviedb.org/3/tv/${id}`,
       options
     );
     const data = await result.json();
@@ -20,7 +20,7 @@ export async function fetchTvDetails(id) {
 export async function fetchTvCredits(id) {
   try {
     const result = await fetch(
-      `https://api.thetvdb.org/3/tv/${id}/credits`,
+      `https://api.themoviedb.org/3/tv/${id}/credits`,
       options
     );
     const data = await result.json();
@@ -36,7 +36,7 @@ export async function fetchTvCredits(id) {
 export async function fetchSimilarTv(id) {
   try {
     const result = await fetch(
-      `https://api.thetvdb.org/3/tv/${id}/similar`,
+      `https://api.themoviedb.org/3/tv/${id}/similar`,
       options
     );
     const data = await result.json();
@@ -52,12 +52,12 @@ export async function fetchSimilarTv(id) {
 export async function fetchTvTrailer(id) {
   try {
     const result = await fetch(
-      `https://api.thetvdb.org/3/tv/${id}/videos`,
+      `https://api.themoviedb.org/3/tv/${id}/videos`,
       options
     );
     const data = await result.json();
 
-    return data.results;
+    return data.results[0];
   } catch (error) {
     console.log("Fail loading tv trailer", error);
     return null;
@@ -66,18 +66,21 @@ export async function fetchTvTrailer(id) {
 
 // Fetch Tv Logo
 export async function fetchTvLogo(id) {
-  try {
-    const result = await fetch(
-      `https://api.thetvdb.org/3/tv/${id}/images`,
-      options
-    );
-    const data = await result.json();
+try {
+  const result = await fetch(
+    `https://api.themoviedb.org/3/tv/${id}/images`,
+    options
+  );
+  const data = await result.json();
 
-    return data.logos;
-  } catch (error) {
-    console.log("Fail loading tv logo", error);
-    return null;
-  }
+  // Find the first English logo
+  const logo = data.logos.find((l) => l.iso_639_1 === "en");
+
+  return logo || null;
+} catch (error) {
+  console.log("Fail loading movie logo", error);
+  return null;
+}
 }
 
 

@@ -20,7 +20,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/movie/:id" element={<MovieDetailsPage />} />
         <Route path="/tv-series" element={<TvPage />} />
-        <Route path="/movie/:id" element={<TvDetailsPage />} />
+        <Route path="/tv-series/:id" element={<TvDetailsPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

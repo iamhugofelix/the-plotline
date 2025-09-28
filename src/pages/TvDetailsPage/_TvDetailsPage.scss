@@ -1,0 +1,144 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
+.tv-page-hero {
+    //Backdrop Adjustments
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    min-height: 40rem;
+    height: 80dvh;
+
+    @media (max-width: 800px) {
+        height: 90dvh;
+    }
+}
+
+.tv-page-hero-wrapper{
+     // Background Overlay
+    background: linear-gradient(
+    to top,
+    $black 0%,
+    transparent 100%);
+    height: 100%;
+
+    @include flex(column, end, start);
+    gap: .5rem;
+    padding: 2rem 4rem;
+
+    img {
+        max-width: 20rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 800px) {
+            max-width: 10rem;
+        }
+    }
+
+    .trailer-btn {
+        margin-top: 2rem;
+        @include flex (row, start, center)
+    }
+
+    @media (max-width: 800px) {
+        padding: 2rem;
+    }
+
+    > * {
+        width: 100%;
+        max-width: 60rem;
+    }
+
+}
+
+.tv-page-body{
+    @include flex(row, start, start);
+    gap: 4rem;
+    padding: 2rem 4rem;
+    
+    @media (max-width: 800px) {
+        padding: 2rem;
+    }
+
+
+    .body-left{
+        flex: 3;
+        @include flex(column, start, start);
+        gap: 4rem;
+
+        .tv-details{
+            width: 100%;
+            @include flex(column, start, start);
+            gap: 1rem;
+    
+            span {
+                @include flex(row, start, center);
+                gap: .5rem;
+            }
+        }
+
+        .tv-cast{
+            width: 100%;
+            @include flex(column, start, start);
+            gap: 1.5rem;
+
+            .cast-grid{
+                @include grid(6);
+                gap: 1.5rem;
+                
+                @media (max-width: 800px) and (min-width: 400px) {
+                    @include grid(4);
+                }
+
+                @media (max-width: 400px) {
+                    @include grid(2);
+                }
+            }
+        }
+
+        .tv-trailer {
+            width: 100%;
+            @include flex(column, start, start);
+            gap: 1.5rem;
+
+            iframe {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                border: solid 1px rgba($color: $white, $alpha: .05);
+            }
+        }
+        
+    }
+
+    .body-right{
+        flex: 1;
+        @include flex(column, start, start);
+        gap: 4rem;
+
+        .tv-genres{
+            @include flex(column, start, start);
+            gap: 1rem;
+
+            .genres{
+                @include flex(row, start, start);
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        .tv-poster{
+            @include flex(column, start, start);
+            gap: 1.5rem;
+        }
+
+    }
+
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 2rem;
+    
+    }
+}

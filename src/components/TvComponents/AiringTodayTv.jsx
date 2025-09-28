@@ -32,7 +32,7 @@ export default function AiringTodayTv() {
         return (
           <ItemCard
             key={tv.id}
-            type={"tv"}
+            type={"tv-series"}
             id={tv.id}
             cardPoster={tv.poster_path}
             cardTitle={tv.name}
