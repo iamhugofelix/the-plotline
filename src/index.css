@@ -157,6 +157,11 @@ a {
   width: 100%;
   background: linear-gradient(to bottom, rgba(9, 9, 11, 0.4), rgba(9, 9, 11, 0));
 }
+@media (max-width: 800px) {
+  .nav-bar {
+    padding: 1rem 1rem;
+  }
+}
 .nav-bar img {
   width: 2rem;
 }
@@ -173,6 +178,21 @@ a {
           backdrop-filter: blur(0.25rem);
   border: solid 1px rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 340px) {
+  .nav-bar .nav-links a > span {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .nav-bar .nav-links a:first-child {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .nav-bar .nav-actions {
+    display: none;
+  }
+}
 
 .footer {
   margin-top: 6rem;
@@ -180,8 +200,28 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 2rem;
   background-color: #18181b;
+}
+@media (max-width: 800px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+  }
+}
+
+.footer-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .btn {
@@ -347,6 +387,11 @@ a {
 }
 .item-card:hover img {
   outline: solid 4px #a1a1aa;
+}
+@media (max-width: 800px) {
+  .item-card {
+    opacity: 1;
+  }
 }
 
 .cast-card {

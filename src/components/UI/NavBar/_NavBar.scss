@@ -10,8 +10,12 @@
     width: 100%;
     background: linear-gradient(to bottom, rgba($black, .4), rgba($black, 0));
 
+    @media (max-width: 800px) {
+         padding: 1rem 1rem;
+    }  
+
     img {
-        width: 2rem;;
+        width: 2rem;
     }
 
     .nav-links {
@@ -22,6 +26,26 @@
         background: rgba($color: $black, $alpha: .1);
         backdrop-filter: blur(0.25rem);
         border: solid 1px rgba($color: $white, $alpha: .2);
+
+        @media (max-width: 340px) {
+            a > span {
+                display: none;
+            }
+        }       
+
+        a:first-child {
+            @media (max-width: 800px) {
+                display: none;
+            }            
+        }
     }
+
+    .nav-actions{
+        @media (max-width: 400px) {
+            display: none;
+        }        
+    }
+
+
 }
 

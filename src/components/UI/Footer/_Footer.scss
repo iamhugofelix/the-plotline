@@ -4,6 +4,19 @@
 .footer {
     margin-top: 6rem;
     @include flex(row, space-between, center);
-    padding: 1rem;
+    gap: 1rem;
+    padding: 2rem;
     background-color: $gray-900;
+
+    @media (max-width: 800px) {
+        @include flex(column, start, center);
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
+    }  
+}
+
+.footer-author {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: .25rem;
 }

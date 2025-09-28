@@ -19,11 +19,11 @@ export default function NavBar() {
           <Tv size={16} /> <span>Tv Series</span>
         </Link>
       </div>
-      <dir className="nav-actions">
+      <div className="nav-actions">
         <Link to={"https://github.com/iamhugofelix"}>
           <FaGithub size={32} />
         </Link>
-      </dir>
+      </div>
     </nav>
   );
 }

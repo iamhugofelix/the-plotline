@@ -24,4 +24,8 @@
             outline: solid 4px $gray-400;
         }
     }
+    
+    @media (max-width: 800px) {
+        opacity: 1;
+    }
 }
