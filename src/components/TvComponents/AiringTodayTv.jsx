@@ -26,8 +26,6 @@ export default function AiringTodayTv() {
     isLoading && <p>Loading...</p>;
   }
 
-  console.log("AiringToday Tv", airingTodayTv);
-
   return (
     <HorizontalGrid title={"Airing Today"}>
       {airingTodayTv.map((tv) => {

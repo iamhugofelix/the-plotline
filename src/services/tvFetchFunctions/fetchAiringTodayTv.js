@@ -3,7 +3,7 @@ import { options } from "../utils";
 export async function fetchAiringTodayTv() {
     try {
       const result = await fetch(
-        `https://api.themoviedb.org/3/tv/airing_today`,
+        `https://api.themoviedb.org/3/tv/airing_today?language=en-US&region=US`,
         options
       );
       const data = await result.json();

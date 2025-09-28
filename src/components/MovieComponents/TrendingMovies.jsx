@@ -25,8 +25,6 @@ export default function TrendingMovies() {
     isLoading && <p>Loading...</p>;
   }
 
-  console.log("Trending Movies", trendingMovies);
-
   return (
     <HorizontalGrid title={"Trending Movies"}>
       {trendingMovies.map((movie) => {

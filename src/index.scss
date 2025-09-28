@@ -7,8 +7,12 @@
 @use './components/UI/NavBar/NavBar';
 @use './components/UI/Footer/Footer';
 @use './components/UI/Buttons/Buttons';
-@use './components/UI/HeroSection/HeroSection';
 @use './components/UI/StarRating/StarRating';
 @use './components/UI/Pills/Pills';
 @use './components/UI/Grids/Grids';
 @use './components/UI/Cards/ItemCard';
+@use './components/UI/Cards/CastCard';
+
+// Pages
+@use './pages/Homepage/Homepage';
+@use './pages/MovieDetailsPage/MoviePage';

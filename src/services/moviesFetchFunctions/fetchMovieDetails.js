@@ -73,7 +73,28 @@ export async function fetchMovieLogo(id) {
     );
     const data = await result.json();
 
-    return data.logos;
+    // Find the first English logo
+    const logo = data.logos.find((l) => l.iso_639_1 === "en");
+    
+    return logo || null;
+
+  } catch (error) {
+    console.log("Fail loading movie logo", error);
+    return null;
+  }
+}
+
+// Fetch Similar Movies
+export async function fetchMovieSimilar(id) {
+  try {
+    const result = await fetch(
+      `https://api.themoviedb.org/3/movie/${id}/similar`,
+      options
+    );
+    const data = await result.json();
+    
+    return data.results
+
   } catch (error) {
     console.log("Fail loading movie logo", error);
     return null;

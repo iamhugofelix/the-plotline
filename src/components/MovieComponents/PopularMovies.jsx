@@ -26,8 +26,6 @@ export default function PopularMovies () {
     isLoading && <p>Loading...</p>;
   }
 
-  console.log('Popular Movies', popularMovies);
-
   return (
     <HorizontalGrid title={"Popular Movies"}>
       {popularMovies.slice(1).map((movie) => {

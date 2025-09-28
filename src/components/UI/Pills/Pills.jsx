@@ -7,8 +7,8 @@ export default function Pill({
   size = "sm",
 }) {
   return (
-    <Link to={url} className={`pill pill-${type} pill--${size}`}>
+    <span to={url} className={`pill pill-${type} pill--${size}`}>
       {children}
-    </Link>
+    </span>
   );
 }

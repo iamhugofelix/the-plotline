@@ -4,7 +4,6 @@
 .pill {
     @include flex(row, center, center);
     line-height: normal;
-    cursor: pointer;
     border-radius: .25rem;
     transition: all 0.2s ease-in-out;
 
@@ -15,19 +14,15 @@
 
 
     &-transparent {
-        background: rgba($color: $black, $alpha: .2);
+        background: rgba($color: $white, $alpha: .1);
+        border: solid 1px rgba($color: $white, $alpha: .2);
+        backdrop-filter: blur(0.25rem);
         color: $white;
-    }
-
-    &--sm {
-        font-size: $small;
-        padding: 0.5rem 0.75rem;
-        font-weight: $regular;
     }
 
     &--md {
         font-size: $h6;
-        padding: 0.5rem 0.75rem;
+        padding: 0.25rem 0.5rem;
         font-weight: $regular;
     }
 }

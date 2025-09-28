@@ -15,5 +15,5 @@
 ) {
     display: grid;
     grid-template-columns: repeat($cols, minmax(0, 1fr));
-    grid-template-columns: auto;
+    grid-template-rows: auto;
 }

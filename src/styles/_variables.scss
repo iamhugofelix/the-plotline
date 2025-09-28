@@ -21,15 +21,15 @@ $accent-light: color.scale($accent-base, $lightness: 25%);
 
 
 // Typography
-$h1: clamp(2.75rem, 5vw, 3rem);
+$h1: clamp(2.5rem, 5vw, 3rem);
 $h2: clamp(1.875rem, 4vw, 2rem);
-$h3: clamp(1.25rem, 2.5vw, 1.5rem);
+$h3: clamp(1.5rem, 2.5vw, 1.5rem);
 $h4: clamp(1.25rem, 2.5vw, 1.5rem);
-$h5: clamp(1.125rem, 2vw, 1.25rem);
-$h6: clamp(1rem, 1.5vw, 1rem);
+$h5: clamp(1.25rem, 2vw, 1.25rem);
+$h6: clamp(1.125rem, 1.5vw, 1rem);
 
-$p: clamp(1rem, 1.5vw, 1rem);
-$small: clamp(0.875rem, 1.2vw, 0.875rem);
+$p: clamp(1.125rem, 1.5vw, 1rem);
+$small: clamp(1rem, 1.2vw, 1rem);
 $x-small: 0.75rem;
 
 $bold: 700;

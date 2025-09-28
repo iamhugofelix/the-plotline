@@ -27,8 +27,6 @@ export default function PopularTv () {
     isLoading && <p>Loading...</p>;
   }
 
-  console.log('Popular Tv', popularTv);
-
   return (
     <HorizontalGrid title={"Popular Tv"}>
       {popularTv.map((tv) => {
