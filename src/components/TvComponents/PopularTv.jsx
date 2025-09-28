@@ -3,6 +3,7 @@ import HorizontalGrid from "../UI/Grids/HorizontalGrid";
 import { useEffect, useState } from "react";
 import ItemCard from "../UI/Cards/ItemCard";
 import { fetchPopularTv } from "@/services/tvFetchFunctions/fetchPopularTv";
+import Loading from "../UI/Loading/Loading";
 
 export default function PopularTv () {
   const [popularTv, setPopularTv] = useState([]);
@@ -24,7 +25,7 @@ export default function PopularTv () {
   }, []);
 
   {
-    isLoading && <p>Loading...</p>;
+    isLoading && <Loading />;
   }
 
   return (

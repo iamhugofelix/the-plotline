@@ -1,6 +1,7 @@
 import CastCard from "@/components/UI/Cards/castCard"
 import ItemCard from "@/components/UI/Cards/ItemCard"
 import HorizontalGrid from "@/components/UI/Grids/HorizontalGrid"
+import Loading from "@/components/UI/Loading/Loading"
 import Pill from "@/components/UI/Pills/Pills"
 import StarRating from "@/components/UI/StarRating/StarRating"
 import { fetchSimilarTv, fetchTvCredits, fetchTvDetails, fetchTvLogo, fetchTvTrailer } from "@/services/tvFetchFunctions/fetchTvDetails"
@@ -56,9 +57,8 @@ export default function TvDetailsPage() {
   console.log("Tv Logo: ", tvLogo);
   console.log("Similar Tvs: ", tvSimilar);
 
-  // ====== I need to solve this later. If any od this returns null, the page breaks ======
   
-  if (!tv) return <p>Loading...</p>;
+  if (!tv) return <Loading />;
 
   // Format run time in Hours + Min
   function formatRuntime(runtime) {

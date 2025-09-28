@@ -1,6 +1,7 @@
 import CastCard from "@/components/UI/Cards/castCard";
 import ItemCard from "@/components/UI/Cards/ItemCard";
 import HorizontalGrid from "@/components/UI/Grids/HorizontalGrid";
+import Loading from "@/components/UI/Loading/Loading";
 import Pill from "@/components/UI/Pills/Pills";
 import StarRating from "@/components/UI/StarRating/StarRating";
 import { fetchMovieCredits, fetchMovieDetails, fetchMovieLogo, fetchMovieSimilar, fetchMovieTrailer } from "@/services/moviesFetchFunctions/fetchMovieDetails";
@@ -57,7 +58,7 @@ export default function MovieDetailsPage() {
 
   // ====== I need to solve this later. If any od this returns null, the page breaks ======
   
-  if (!movie || !movieCredits) return <p>Loading...</p>;
+  if (!movie || !movieCredits) return <Loading />;
 
   // Format run time in Hours + Min
   function formatRuntime(runtime) {

@@ -322,6 +322,16 @@ a {
   font-weight: 400;
 }
 
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100dvh;
+  width: 100%;
+}
+
 .page-section {
   display: flex;
   flex-direction: column;

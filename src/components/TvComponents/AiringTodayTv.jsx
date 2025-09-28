@@ -3,6 +3,7 @@ import ItemCard from "../UI/Cards/ItemCard";
 import { useEffect, useState } from "react";
 import HorizontalGrid from "../UI/Grids/HorizontalGrid";
 import { fetchAiringTodayTv } from "@/services/tvFetchFunctions/fetchAiringTodayTv";
+import Loading from "../UI/Loading/Loading";
 
 export default function AiringTodayTv() {
   const [airingTodayTv, setAiringTodayTv] = useState([]);
@@ -23,7 +24,7 @@ export default function AiringTodayTv() {
   }, []);
 
   {
-    isLoading && <p>Loading...</p>;
+    isLoading && <Loading />;
   }
 
   return (

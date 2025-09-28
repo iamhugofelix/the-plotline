@@ -20,7 +20,7 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="nav-actions">
-        <Link to={"https://github.com/iamhugofelix"}>
+        <Link to={"https://github.com/iamhugofelix/the-plotline"}>
           <FaGithub size={32} />
         </Link>
       </div>

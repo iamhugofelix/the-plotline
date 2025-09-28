@@ -1,0 +1,9 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.loading-page {
+    @include flex(column, center, center);
+    gap: 1.5rem;
+    height: 100dvh;
+    width: 100%;
+}

@@ -10,10 +10,13 @@ import TvPage from './pages/TvPage/TvPage.jsx'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 import NavBar from './components/UI/NavBar/NavBar'
 import Footer from './components/UI/Footer/Footer'
+import Loading from './components/UI/Loading/Loading'
+import ScrollToTop from './services/ScrollToTop'
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -23,6 +26,8 @@ createRoot(document.getElementById("root")).render(
         <Route path="/tv-series/:id" element={<TvDetailsPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
+
+        <Route path="/loading" element={<Loading />} />
       </Routes>
       <Footer />
     </BrowserRouter>

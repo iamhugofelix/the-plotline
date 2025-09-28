@@ -2,6 +2,7 @@ import { fetchPopularMovies } from "@/services/moviesFetchFunctions/fetchPopular
 import HorizontalGrid from "../UI/Grids/HorizontalGrid";
 import { useEffect, useState } from "react";
 import ItemCard from "../UI/Cards/ItemCard";
+import Loading from "../UI/Loading/Loading";
 
 export default function PopularMovies () {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -23,7 +24,7 @@ export default function PopularMovies () {
   }, []);
 
   {
-    isLoading && <p>Loading...</p>;
+    isLoading && <Loading />;
   }
 
   return (

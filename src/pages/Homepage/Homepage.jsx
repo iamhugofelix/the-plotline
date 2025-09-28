@@ -2,6 +2,7 @@ import PopularMovies from "@/components/MovieComponents/PopularMovies";
 import TrendingMovies from "@/components/MovieComponents/TrendingMovies";
 import AiringTodayTv from "@/components/TvComponents/AiringTodayTv";
 import PopularTv from "@/components/TvComponents/PopularTv";
+import Loading from "@/components/UI/Loading/Loading";
 import Pill from "@/components/UI/Pills/Pills";
 import StarRating from "@/components/UI/StarRating/StarRating";
 import { fetchTopItemDetails, fetchTopItems, fetchTopItemTrailer } from "@/services/fetchTopItems";
@@ -64,7 +65,7 @@ export default function Homepage () {
   }, [topItem]);
 
   {
-    isLoading && <p>Loading...</p>;
+    isLoading && <Loading />;
   }
 
   return (

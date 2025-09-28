@@ -2,6 +2,7 @@ import { fetchTrendingMovies } from "@/services/moviesFetchFunctions/fetchTrendi
 import ItemCard from "../UI/Cards/ItemCard";
 import { useEffect, useState } from "react";
 import HorizontalGrid from "../UI/Grids/HorizontalGrid";
+import Loading from "../UI/Loading/Loading";
 
 export default function TrendingMovies() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -22,7 +23,7 @@ export default function TrendingMovies() {
   }, []);
 
   {
-    isLoading && <p>Loading...</p>;
+    isLoading && <Loading />;
   }
 
   return (
