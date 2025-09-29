@@ -1,4 +1,5 @@
-import CastCard from "@/components/UI/Cards/castCard"
+
+import CastCard from "@/components/UI/Cards/CastCard"
 import ItemCard from "@/components/UI/Cards/ItemCard"
 import HorizontalGrid from "@/components/UI/Grids/HorizontalGrid"
 import Loading from "@/components/UI/Loading/Loading"
