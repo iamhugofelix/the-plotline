@@ -2,7 +2,7 @@
 @use '../../../styles/variables' as *;
 
 .ver-grid {
-    @include grid(5);
+    @include grid(6);
     gap: 1.5rem;
 
     @media (max-width: 1200px) and (min-width: 800px) {

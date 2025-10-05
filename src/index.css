@@ -381,7 +381,7 @@ a {
 
 .ver-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: auto;
   gap: 1.5rem;
 }
@@ -876,6 +876,37 @@ a {
 }
 
 .movies-load-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.tv-header {
+  padding: 10rem 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+@media (max-width: 800px) {
+  .tv-header {
+    padding: 10rem 2rem 4rem 2rem;
+  }
+}
+
+.tv-grid-wrapper {
+  padding: 0 4rem;
+}
+@media (max-width: 800px) {
+  .tv-grid-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+.tv-load-more {
   display: flex;
   flex-direction: column;
   justify-content: center;

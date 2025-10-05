@@ -1,0 +1,27 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.tv-header {
+    padding: 10rem 4rem 4rem 4rem;
+    @include flex(column, start, start);
+    gap: 2rem;
+
+    @media (max-width: 800px) {
+        padding: 10rem 2rem 4rem 2rem;
+    }
+
+}
+
+.tv-grid-wrapper {
+    padding: 0 4rem;
+    
+    @media (max-width: 800px) {
+        padding: 0 2rem;
+    }
+    
+}
+
+.tv-load-more {
+    @include flex(column, center, center);
+    padding: 4rem 2rem;
+}
