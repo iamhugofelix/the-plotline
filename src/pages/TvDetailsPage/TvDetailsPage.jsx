@@ -17,7 +17,7 @@ export default function TvDetailsPage() {
   const [tvCredits, setTvCredits] = useState(null)
   const [tvTrailer, setTvTrailer] = useState(null)
   const [tvLogo, setTvLogo] = useState(null)
-  const [tvSimilar, setTvSimilar] = useState(null);
+  const [tvSimilar, setTvSimilar] = useState([]);
 
   useEffect(() => {
     async function loadTvDetails() {
@@ -119,12 +119,12 @@ export default function TvDetailsPage() {
               <span className="link">{formatDate(tv.first_air_date)}</span>
             </span>
 
-            {tv.last_air_date && 
-                <span id="release-date">
-                  Last Aired:{" "}
-                  <span className="link">{formatDate(tv.last_air_date)}</span>
-                </span>
-            }
+            {tv.last_air_date && (
+              <span id="release-date">
+                Last Aired:{" "}
+                <span className="link">{formatDate(tv.last_air_date)}</span>
+              </span>
+            )}
 
             <span id="seasons">
               Seasons:{" "}
@@ -144,8 +144,6 @@ export default function TvDetailsPage() {
                 </Link>
               </span>
             )}
-
-
           </div>
 
           {tvCredits && (
@@ -200,7 +198,7 @@ export default function TvDetailsPage() {
         </div>
       </div>
 
-      {tvSimilar && (
+      {tvSimilar.length > 0 && (
         <div className="tv-page-similar">
           <HorizontalGrid title={"Similar Series"}>
             {tvSimilar.map((tv) => {
@@ -210,7 +208,7 @@ export default function TvDetailsPage() {
                   key={tv.id}
                   id={tv.id}
                   cardPoster={tv.poster_path}
-                  cardTitle={tv.title}
+                  cardTitle={tv.name}
                 />
               );
             })}

@@ -41,7 +41,11 @@ export async function fetchSimilarTv(id) {
     );
     const data = await result.json();
 
-    return data.results;
+    // Sort by popularity
+    const sorted = (data.results || []).sort((a, b) => b.popularity - a.popularity 
+  )
+
+    return sorted;
   } catch (error) {
     console.log("Fail loading similar tv", error);
     return null;

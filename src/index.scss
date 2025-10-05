@@ -10,7 +10,8 @@
 @use './components/UI/StarRating/StarRating';
 @use './components/UI/Pills/Pills';
 @use './components/UI/Loading/Loading';
-@use './components/UI/Grids/Grids';
+@use './components/UI/Grids/HorizontalGrid';
+@use './components/UI/Grids/VerticalGrid';
 @use './components/UI/Cards/ItemCard';
 @use './components/UI/Cards/CastCard';
 
@@ -18,3 +19,4 @@
 @use './pages/Homepage/Homepage';
 @use './pages/MovieDetailsPage/MovieDetailsPage';
 @use './pages/TvDetailsPage/TvDetailsPage';
+@use './pages/MoviesPage/MoviesPage';

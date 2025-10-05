@@ -1,0 +1,16 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.ver-grid {
+    @include grid(5);
+    gap: 1.5rem;
+
+    @media (max-width: 1200px) and (min-width: 800px) {
+        @include grid(4);
+    }
+
+    @media (max-width: 800px){
+        @include grid(2);
+    }
+
+}

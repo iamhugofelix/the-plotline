@@ -15,7 +15,7 @@ export default function MovieDetailsPage() {
   const [movieCredits, setMovieCredits] = useState(null)
   const [movieTrailer, setMovieTrailer] = useState(null)
   const [movieLogo, setMovieLogo] = useState(null)
-  const [movieSimilar, setMovieSimilar] = useState(null);
+  const [movieSimilar, setMovieSimilar] = useState([]);
 
   useEffect(() => {
     async function loadMovieDetails() {
@@ -78,8 +78,6 @@ export default function MovieDetailsPage() {
   })
     return formattedDate;
   }
-
-  console.log('movie :', movie);
 
   return (
     <>
@@ -204,13 +202,13 @@ export default function MovieDetailsPage() {
         </div>
       </div>
 
-      {movieSimilar && 
+      {movieSimilar.length > 0 && (
         <div className="movie-page-similar">
           <HorizontalGrid title={"Similar Movies"}>
             {movieSimilar.map((movie) => {
               return (
                 <ItemCard
-                  type={'movie'}
+                  type={"movie"}
                   key={movie.id}
                   id={movie.id}
                   cardPoster={movie.poster_path}
@@ -220,7 +218,7 @@ export default function MovieDetailsPage() {
             })}
           </HorizontalGrid>
         </div>
-      }
+      )}
     </>
   );  
 }

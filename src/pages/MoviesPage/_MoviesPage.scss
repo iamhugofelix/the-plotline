@@ -1,0 +1,27 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.movies-header {
+    padding: 10rem 4rem 4rem 4rem;
+    @include flex(column, start, start);
+    gap: 2rem;
+
+    @media (max-width: 800px) {
+        padding: 10rem 2rem 4rem 2rem;
+    }
+
+}
+
+.movies-grid-wrapper {
+    padding: 0 4rem;
+    
+    @media (max-width: 800px) {
+        padding: 0 2rem;
+    }
+    
+}
+
+.movies-load-more {
+    @include flex(column, center, center);
+    padding: 4rem 2rem;
+}

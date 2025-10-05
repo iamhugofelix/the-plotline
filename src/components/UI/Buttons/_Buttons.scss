@@ -2,6 +2,8 @@
 @use '../../../styles/variables' as *;
 
 .btn {
+    all: unset;
+    cursor: pointer;
     @include flex(row, center, center);
     line-height: normal;
     border-radius: 10rem;
