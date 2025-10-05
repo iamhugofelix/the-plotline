@@ -1,12 +1,33 @@
-# React + Vite
+# 🎬 The Plotline
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The Plotline** is a movie browser app built with **React**, **JavaScript**, and **CSS**, using **The Movie Database (TMDB)** API as its data source.  
+The goal of this project is to **practice and improve** my front-end development skills while working on a real, functional app.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Discover popular and trending movies/series
+- Check movie/series details in a details page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 What I’m Learning
+
+This project helps me:
+- Strengthen my understanding of **React hooks** (`useState`, `useEffect`)  
+- Train to handle **API requests** and asynchronous data fetching  
+- Improve my **component structure and state management**  
+- Experiment with **clean SCSS and UI layout techniques**
+
+---
+
+## 🔮 Future Improvements
+
+Some ideas for future versions:
+- Add a **search bar** to find specific movies  
+- Create **filters** for movies and series
+- Add **filter combinations** (e.g., by year, rating, or popularity)  
+- Improve **loading states** and error handling
+- Improve **image fallbacks** for movie posters and cast pics
+- Add **dark/light theme toggle**  
